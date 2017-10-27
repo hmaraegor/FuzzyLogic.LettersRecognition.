@@ -1,3 +1,5 @@
+ % Text recognition.
+ 
  Image3uint8 = imread('E:\Documents\text.BMP');
  Image1uint8 = Image3uint8(:,:,1);
  figure, imshow(Image1uint8); title('resize');
@@ -27,4 +29,5 @@
          Out = [Out '     '];
      end
  end
+save('E:\Documents\Test.dat','Out','-ascii');
 Out
