@@ -1,4 +1,4 @@
-% Processing letter. Splitting the letter on 9 parts (3x3).
+% Letter processing. Splitting the letter on 9 parts (3x3).
 % Each part is the ratio of white pixels to black.
 
 function Answer = funLetterProcessing(BlackWhiteImage, LeftLett, RightLett, TopLett, BottomLett)
