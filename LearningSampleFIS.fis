@@ -25,7 +25,7 @@ NumMFs=2
 MF1='in2mf1':'trimf',[-2 -0.00133494354677572 1.98508119328133]
 MF2='in2mf2':'trimf',[0.0149045689664199 1.9986631470391 4]
 
-[Input3]
+[Input3] 
 Name='input3'
 Range=[0 2]
 NumMFs=2
