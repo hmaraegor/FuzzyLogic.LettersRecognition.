@@ -1,22 +1,23 @@
-function Ans = funFindStrings(A)
-    Start=0;
-    Ans=zeros(1,10);
-    for i=1:1:length(A(:,1)) %кол-во i
-        f=0;
-        for j=1:1:length(A(1,:)) %кол-во j
-            if A(i,j)~=1 & f==0 & Start==0      %Если пиксель не белый, то
-            Start=i;                            %эта строка начало
-            f=1;
+% This function find top and bottom each string.
+
+function Answer = funFindStrings(A)
+    TopStr = 0;
+    Answer = zeros(1,10);
+    for i = 1:1:length(BlackWhiteImage(:,1))
+        BotS = 0;
+        for j = 1:1:length(BlackWhiteImage(1,:)) 
+            if BlackWhiteImage(i,j)~=1 & BotS==0 & TopStr==0   
+            TopStr = i; 
+            BotS = 1;
             end
-            if A(i,j)~=1 & Start~=0             %Если пиксель не белый, то
-            f=1;                                %продолжаем искать конец
+            if BlackWhiteImage(i,j)~=1 & TopStr~=0         
+            BotS = 1;                              
             end
         end
-        if f==0 & Start~=0                      %Если все пиксели были белые, то
-        Final=i-1;                              %конец строки найден, и
-        i
-        Ans=[Ans; funFindLetters(A, Start, Final)];        %идем искать буквы этой строки
-        Start=0;
+        if BotS==0 & TopStr~=0                     
+        BottomStr = i-1;  
+        Answer=[Answer; funFindLetters(BlackWhiteImage, TopStr, BottomStr)];        %finding letters 
+        Top = 0;
         end
     end
 
