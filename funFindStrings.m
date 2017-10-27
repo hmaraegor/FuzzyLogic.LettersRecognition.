@@ -1,6 +1,6 @@
 % This function find top and bottom each string.
 
-function Answer = funFindStrings(A)
+function Answer = funFindStrings(BlackWhiteImage)
     TopStr = 0;
     Answer = zeros(1,10);
     for i = 1:1:length(BlackWhiteImage(:,1))
