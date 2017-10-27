@@ -20,6 +20,5 @@ function Answer = funFindStrings(BlackWhiteImage)
         Top = 0;
         end
     end
-
 end
 
